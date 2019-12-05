@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandyRidge.Web", "RandyRidge.Web\RandyRidge.Web.csproj", "{D954ED76-164D-41D3-8F3C-FBA2AEF66B4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandyRidge.Web.Tests", "RandyRidge.Web.Tests\RandyRidge.Web.Tests.csproj", "{7FAB5123-23D4-4FFC-9CDB-538CCC8BE8BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandyRidge.Web.Benchmarks", "RandyRidge.Web.Benchmarks\RandyRidge.Web.Benchmarks.csproj", "{52C5AFD3-FB33-4FA5-8D49-002D34F43EBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{508B5B17-D137-40BD-AC4D-44CD3866F159}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+		LICENSE = LICENSE
+		README.md = README.md
+		.github\workflows\release.yml = .github\workflows\release.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D954ED76-164D-41D3-8F3C-FBA2AEF66B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D954ED76-164D-41D3-8F3C-FBA2AEF66B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D954ED76-164D-41D3-8F3C-FBA2AEF66B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D954ED76-164D-41D3-8F3C-FBA2AEF66B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FAB5123-23D4-4FFC-9CDB-538CCC8BE8BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FAB5123-23D4-4FFC-9CDB-538CCC8BE8BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FAB5123-23D4-4FFC-9CDB-538CCC8BE8BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FAB5123-23D4-4FFC-9CDB-538CCC8BE8BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52C5AFD3-FB33-4FA5-8D49-002D34F43EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52C5AFD3-FB33-4FA5-8D49-002D34F43EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52C5AFD3-FB33-4FA5-8D49-002D34F43EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52C5AFD3-FB33-4FA5-8D49-002D34F43EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B17FD8C-8CA0-42A0-9693-B5663BBBAF76}
+	EndGlobalSection
+EndGlobal
