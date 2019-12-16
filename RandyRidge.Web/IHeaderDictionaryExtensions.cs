@@ -24,7 +24,7 @@ namespace RandyRidge.Web {
         ///     Thrown if <paramref name="headers" /> is null.
         /// </exception>
         public static bool HasMultipartContentType(this IHeaderDictionary? headers) {
-            headers = Guard.ArgumentNotNull(headers, nameof(headers));
+            headers = Guard.NotNull(headers, nameof(headers));
             return headers.TryGetValue(HeaderNames.ContentType, out var values) && values.Any(v => v.IndexOf(MultipartPrefix, StringComparison.OrdinalIgnoreCase) >= 0);
         }
 
@@ -41,7 +41,7 @@ namespace RandyRidge.Web {
         ///     Thrown if <paramref name="headers" /> is null.
         /// </exception>
         public static bool IsConditionalRequest(this IHeaderDictionary? headers) {
-            headers = Guard.ArgumentNotNull(headers, nameof(headers));
+            headers = Guard.NotNull(headers, nameof(headers));
             return headers.ContainsKey(HeaderNames.IfMatch) || headers.ContainsKey(HeaderNames.IfNoneMatch);
         }
     }
