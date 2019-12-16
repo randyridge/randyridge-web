@@ -8,10 +8,10 @@
     <Nullable>enable</Nullable>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <TargetFrameworks>netcoreapp3.1;netstandard2.1;</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Version>0.1.1</Version>
+    <Version>0.1.2</Version>
     <Authors>Randy Ridge</Authors>
     <Company />
     <PackageProjectUrl>https://github.com/randyridge/randyridge-web</PackageProjectUrl>
@@ -37,6 +37,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Net.Http.Headers" Version="2.2.8" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-    <PackageReference Include="RandyRidge.Common" Version="0.1.9" />
+    <PackageReference Include="RandyRidge.Common" Version="0.1.16" />
   </ItemGroup>
 </Project>
