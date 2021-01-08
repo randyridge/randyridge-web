@@ -32,6 +32,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-    <PackageReference Include="RandyRidge.Common" Version="0.5.0" />
+    <PackageReference Include="RandyRidge.Common" Version="0.5.2" />
   </ItemGroup>
 </Project>
