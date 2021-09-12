@@ -21,6 +21,7 @@ namespace RandyRidge.Web {
         /// <inheritdoc />
         public void OnResourceExecuting(ResourceExecutingContext context) {
             context = Guard.NotNull(context, nameof(context));
+            RemoveFormValueProvider<FormFileValueProviderFactory >(context);
             RemoveFormValueProvider<FormValueProviderFactory>(context);
             RemoveFormValueProvider<JQueryFormValueProviderFactory>(context);
         }
