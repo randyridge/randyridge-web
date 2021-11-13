@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -8,38 +7,38 @@ using Microsoft.AspNetCore.Routing;
 using Shouldly;
 using Xunit;
 
-namespace RandyRidge.Web {
-    public static class DisableFormValueModelBindingAttributeTester {
-        private static readonly DisableFormValueModelBindingAttribute Attribute = new DisableFormValueModelBindingAttribute();
+namespace RandyRidge.Web; 
 
-        public static class OnResourceExecuted {
-            [Fact]
-            public static void coverage() {
-                Attribute.OnResourceExecuted(new ResourceExecutedContext(new ActionContext(new DefaultHttpContext(), new RouteData(), new ActionDescriptor()), new List<IFilterMetadata>()));
-            }
-        }
+public static class DisableFormValueModelBindingAttributeTester {
+	private static readonly DisableFormValueModelBindingAttribute Attribute = new();
 
-        public static class OnResourceExecuting {
-            [Fact]
-            public static void removes_form_value_provider() {
-                VerifyRemoval(BuildContext(new FormValueProviderFactory()));
-            }
+	public static class OnResourceExecuted {
+		[Fact]
+		public static void coverage() {
+			Attribute.OnResourceExecuted(new ResourceExecutedContext(new ActionContext(new DefaultHttpContext(), new RouteData(), new ActionDescriptor()), new List<IFilterMetadata>()));
+		}
+	}
 
-            [Fact]
-            public static void removes_jquery_form_value_provider() {
-                VerifyRemoval(BuildContext(new JQueryFormValueProviderFactory()));
-            }
+	public static class OnResourceExecuting {
+		[Fact]
+		public static void removes_form_value_provider() {
+			VerifyRemoval(BuildContext(new FormValueProviderFactory()));
+		}
 
-            private static void VerifyRemoval(ResourceExecutingContext ctx) {
-                ctx.ValueProviderFactories.Count.ShouldBe(1);
-                Attribute.OnResourceExecuting(ctx);
-                ctx.ValueProviderFactories.Count.ShouldBe(0);
-            }
-        }
+		[Fact]
+		public static void removes_jquery_form_value_provider() {
+			VerifyRemoval(BuildContext(new JQueryFormValueProviderFactory()));
+		}
 
-        private static ResourceExecutingContext BuildContext(IValueProviderFactory providerFactory) =>
-            new ResourceExecutingContext(new ActionContext(new DefaultHttpContext(), new RouteData(), new ActionDescriptor()), new List<IFilterMetadata>(), new List<IValueProviderFactory> {
-                providerFactory
-            });
-    }
+		private static void VerifyRemoval(ResourceExecutingContext ctx) {
+			ctx.ValueProviderFactories.Count.ShouldBe(1);
+			Attribute.OnResourceExecuting(ctx);
+			ctx.ValueProviderFactories.Count.ShouldBe(0);
+		}
+	}
+
+	private static ResourceExecutingContext BuildContext(IValueProviderFactory providerFactory) =>
+		new(new ActionContext(new DefaultHttpContext(), new RouteData(), new ActionDescriptor()), new List<IFilterMetadata>(), new List<IValueProviderFactory> {
+			providerFactory
+		});
 }

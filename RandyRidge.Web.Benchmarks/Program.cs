@@ -1,6 +1,6 @@
-﻿namespace RandyRidge.Web {
-    internal static class Program {
-        private static void Main() {
-        }
-    }
+﻿namespace RandyRidge.Web; 
+
+internal static class Program {
+	private static void Main() {
+	}
 }
